@@ -1,0 +1,43 @@
+{
+  "manifest_version": 2,
+
+  "name": "Cognition Apple",
+  "description": "A productivity app to help you get the most out of your time through focus.",
+  "version": "0.0.1",
+
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "Open the popup"
+  },
+  "background_color": "#ffffff",
+  "display": "standalone",
+  /*"icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "apple-pexels-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "apple-pexels-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],*/
+  "icons": {
+    "16": "Apple - 16x16.png",
+    "48": "Apple - 48x48.png",
+    "128": "Apple - 128x128.png"
+  },
+  "permissions": [
+    "webRequest",
+    "*://developer.mozilla.org/"
+  ],
+  "short_name": "React App",
+  "start_url": ".",
+  "theme_color": "#000000"
+}
