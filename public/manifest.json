@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Cognition Apple",
-  "description": "A productivity app to help you get the most out of your time through focus.",
+  "description": "A productivity app to help you get the most out of your time by focusing effectively.",
   "version": "0.0.1",
 
   "browser_action": {
@@ -16,7 +16,12 @@
   },
   "permissions": [
     "webRequest",
-    "*://developer.mozilla.org/"
+    "*://developer.mozilla.org/",
+    "*://youtube.com/*",
+    "*://tiktok.com/*"
   ],
+  "background": {
+    "scripts": [ "app/background.js" ]
+  },
   "short_name": "React App"
 }

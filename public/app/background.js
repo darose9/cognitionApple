@@ -1,12 +1,8 @@
-"background": {
-    "scripts": ["app/background.js"]
-}
-
 (function () {
     const tabStorage = {};
     const networkFilters = {
         urls: [
-            "*youtube.com*","*tiktok.com*"
+            "*://tiktok.com/*", "*://youtube.com/*", "*://www.tiktok.com/*", "*://www.youtube.com/*"
         ]
     };
 
@@ -71,5 +67,15 @@
             return;
         }
         tabStorage[tabId] = null;
+    });
+    chrome.runtime.onMessage.addListener((msg, sender, response) => {
+        switch (msg.type) {
+            case 'popupInit':
+                response(tabStorage[msg.tabId]);
+                break;
+            default:
+                response('unknown request');
+                break;
+        }
     });
 }());
